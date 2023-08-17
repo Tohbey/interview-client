@@ -1,0 +1,30 @@
+@import 'src/app/scss/util';
+
+.login-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.text-container {
+  text-align: center;
+  padding: 2rem;
+
+  &-body{
+    font-size: 1.4rem;
+  }
+}
+
+.text-dark{
+  color: #000!important;
+}
+
+
+.new-user{
+  margin-bottom: 5rem !important;
+  line-height: 16px !important;
+  width: 100%;
+}

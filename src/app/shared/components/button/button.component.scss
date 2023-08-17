@@ -1,0 +1,138 @@
+@import 'src/app/scss/vairable';
+
+
+@mixin btn-shadow {
+  box-shadow: 0 4px 8px rgba(16, 24, 40, 0.1), 0 2px 4px rgba(16, 24, 40, 0.06);
+}
+
+.base-btn {
+  font-size: 16px;
+  border: none;
+  color: #FFFFFF;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 16px;
+  position: relative;
+  line-height: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: .2s;
+  letter-spacing: 5px;
+
+  .spinner img {
+    height: 20px;
+  }
+
+  .button-text {
+    margin: auto;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.spinner {
+  margin-right: 8px;
+}
+
+.small-btn {
+  min-width: 150px;
+  height: 40px;
+  justify-content: unset;
+
+  .material-icons-round {
+    font-size: 20px;
+  }
+
+  .spinner img {
+    height: 18px;
+  }
+
+  .button-text {
+    font-size: 14px;
+  }
+}
+
+.medium-btn {
+  min-width: 250px;
+  height: 48px;
+  justify-content: unset;
+
+  .button-text {
+    font-size: 14px;
+  }
+}
+
+.large-btn {
+  min-width: 325px;
+  height: 56px;
+}
+
+.primary-btn {
+  background-color: $primary-color-300;
+
+  &:hover {
+    background-color: $primary-color-400;
+    @include btn-shadow;
+  }
+
+  &:active {
+    background-color: $primary-color-600;
+
+  }
+
+  &:disabled {
+    background-color: $primary-color-100;
+
+  }
+}
+
+.secondary-btn {
+  background-color: $secondary-color-300;
+
+
+  &:hover {
+    background-color: $secondary-color-400;
+    @include btn-shadow;
+  }
+
+  &:active {
+    background-color: $secondary-color-600;
+
+  }
+
+  &:disabled {
+    background-color: $secondary-color-100;
+
+  }
+}
+
+.ghost-btn {
+  background-color: transparent;
+  border: 1px solid $dark-grey;
+  color: $dark-grey;
+
+
+  &:hover {
+    border: 1px solid #C5C7CE;
+    @include btn-shadow;
+  }
+
+  &:active {
+    border: 1px solid #9C9C9C;
+    color: #9C9C9C;
+
+  }
+
+  &:disabled {
+    border: 1px solid #DBDEE0;
+    color: #9C9C9C;
+  }
+}
+
+.bg-dark-grey, .bg-dark-grey:hover {
+  color: $dark-grey;
+}

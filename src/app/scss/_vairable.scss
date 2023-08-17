@@ -1,0 +1,50 @@
+$laptop-medium: 75em;       //1200px
+$laptop-small: 64em;        //1024px
+$tablet-big: 56em;          //896px
+$tablet-small: 48em;        //768px
+$tablet: 37.28em;           //596.5px
+$mobile-large:  26.8em;    //429px
+$mobile-medium: 23.46em;    //375px
+$mobile-small:  20.1em;     //320px
+
+$dark-color: #252525;
+$secondary-color: #F2994A;
+$secondary-color-100: lighten($secondary-color, 40%);
+$secondary-color-200: lighten($secondary-color, 30%);
+$secondary-color-300: lighten($secondary-color, 20%);
+$secondary-color-400: lighten($secondary-color, 10%);
+$secondary-color-500: darken($secondary-color, 10%);
+$secondary-color-600: darken($secondary-color, 20%);
+
+
+$primary-color: #092C4C;
+$primary-color-100: lighten($primary-color, 40%);
+$primary-color-200: lighten($primary-color, 30%);
+$primary-color-300: lighten($primary-color, 20%);
+$primary-color-400: lighten($primary-color, 10%);
+$primary-color-500: darken($primary-color, 10%);
+$primary-color-600: darken($primary-color, 20%);
+
+$white: #ffffff;
+$black: #000000;
+$grey1:#E5E5E5;
+$grey2:#D5D5D5;
+$grey: #757575;
+$dark-grey: #585B68;
+
+
+
+$font-primary: 'lato-Regular';
+$font-header: 'lato-Bold';
+//$font-Subheader: 'Poppins-SemiBold';
+//$font-medium: 'Poppins-Medium';
+
+//font sizes
+$font-size-xxs: 1.2rem;
+$font-size-xs: 1.3rem;
+$font-size-sm: 1.4rem;
+$font-size-md: 1.6rem;
+$font-size-lg: 1.8rem;
+$font-size-xl: 2rem;
+$font-size-xxl: 2.2rem;
+$font-size-heading: 3.2rem;

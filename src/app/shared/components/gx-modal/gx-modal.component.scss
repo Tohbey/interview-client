@@ -1,0 +1,96 @@
+/* MODAL STYLES
+-------------------------------*/
+gx-modal {
+  /* modals are hidden by default */
+  display: none;
+  .gx-modal {
+    /* modal container fixed across whole screen */
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /* z-index must be higher than .gx-modal-background */
+    z-index: 1000;
+
+    /* enables scrolling for tall modals */
+    overflow: auto;
+
+    .gx-modal-body {
+      display: flex;
+      flex-direction: column;
+      //align-items: flex-start;
+      position: relative;
+      border-radius: 20px;
+      padding: 2rem;
+      background: var(--card-bg-color);
+      margin: 5vh auto;
+      max-height: 90vh;
+      max-width: 90%;
+      overflow-y: auto;
+    }
+
+    .gx-modal-body::-webkit-scrollbar-track
+    {
+      -webkit-box-shadow: inset 0 0 6px rgba(101, 112, 133, .1);
+      border-radius: 2px;
+      background-color: #F5F5F5;
+      height: 30px;
+    }
+
+    .gx-modal-body::-webkit-scrollbar
+    {
+      width: 5px;
+      background-color: #F5F5F5;
+      height: 90%;
+    }
+
+    .gx-modal-body::-webkit-scrollbar-thumb
+    {
+      border-radius: 2px;
+      -webkit-box-shadow: inset 0 0 6px rgba(101, 112, 133, .1);
+      background-color: #657085;
+    }
+  }
+
+  .gx-modal-background {
+    /* modal background fixed across whole screen */
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /* semi-transparent black  */
+    background-color: #000;
+    opacity: 0.75;
+
+    /* z-index must be below .gx-modal and above everything else  */
+    z-index: 999;
+  }
+}
+
+
+
+body.gx-modal-open {
+  /* body overflow is hidden to hide main scrollbar when modal window is open */
+  overflow: hidden;
+}
+
+
+.taxhint-modal {
+  .gx-modal-body {
+    padding: 57px 51px !important;
+    @media only screen and (max-width: 768px) {
+      padding: 29px 26px !important;
+    }
+  }
+
+}
+.payitem-modal,.analysis-modal, .run-details-modal {
+  .gx-modal-body {
+    max-height: none !important;
+  }
+}
+

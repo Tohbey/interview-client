@@ -1,0 +1,44 @@
+<div [formGroup]="form" class="form-group">
+
+  <ng-container [ngSwitch]="input.controlType">
+
+    <ng-container *ngSwitchCase="'textbox'">
+      <div  class="form-floating mb-5">
+        <input class="form-control" [formControlName]="input.key" [id]="input.key" [type]="input.type">
+        <label [for]="input.key">{{input.label}} <span *ngIf="input.required" class="required" aria-required="true"><sup>*</sup></span></label>
+      </div>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="'dropdown'">
+      <div  class="form-floating mb-5">
+        <select class="custom-select" [id]="input.key" [formControlName]="input.key">
+          <option *ngFor="let opt of input.options" [value]="opt.key">{{opt.value}}</option>
+        </select>
+        <label [for]="input.key">{{input.label}} <span *ngIf="input.required" class="required" aria-required="true"><sup>*</sup></span></label>
+      </div>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="'checkbox'">
+      <div class="form-check form-floating mb-5">
+        <input class="form-check-input" type="checkbox" [formControlName]="input.key" [id]="input.key">
+        <label [for]="input.key">{{input.label}} <span *ngIf="input.required" class="required" aria-required="true"><sup>*</sup></span></label>
+      </div>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="'radio'">
+      <div class="form-check form-check-inline " *ngFor="let opt of input.options">
+        <input class="form-check-input" type="radio" [formControlName]="input.key" [id]="input.key" [value]="opt.value">
+        <label class="form-check-label" [for]="opt.key"> {{ opt.value }} </label>
+      </div>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="'textarea'">
+      <div  class="form-floating mb-5">
+        <textarea class="form-control" [formControlName]="input.key" [id]="input.key" rows="5"></textarea>
+        <label [for]="input.key">{{input.label}} <span *ngIf="input.required" class="required" aria-required="true"><sup>*</sup></span></label>
+      </div>
+    </ng-container>
+
+  </ng-container>
+
+</div>

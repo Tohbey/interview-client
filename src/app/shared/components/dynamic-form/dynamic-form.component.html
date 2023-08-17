@@ -1,0 +1,19 @@
+<div>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+
+    <div *ngFor="let formField of formFields" class="form-group">
+      <app-dynamic-form-input [input]="formField" [form]="form"></app-dynamic-form-input>
+    </div>
+
+    <div class="form-group">
+      <app-button [buttonConfig]="{isDisabled: form.invalid,
+       customClass:'medium-btn primary-btn',
+       text:buttonName}" (click)="onSubmit()"
+      ></app-button>
+    </div>
+  </form>
+
+  <div *ngIf="payLoad" class="form-group">
+    <strong>Here's the payload</strong><br>{{payLoad}}
+  </div>
+</div>

@@ -1,0 +1,74 @@
+@import 'src/app/scss/vairable';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+
+html{
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+
+  @media only screen and (max-width: $laptop-medium){
+    font-size: 58%;
+  }
+
+  @media only screen and (max-width: $laptop-small){
+    font-size: 54%;
+  }
+
+  @media only screen and (max-width: $tablet-big){
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: $tablet-small){
+    font-size: 48%;
+  }
+
+  @media only screen and (max-width: $tablet){
+    font-size: 44%;
+  }
+
+  @media only screen and (max-width: $mobile-large){
+    font-size: 40%;
+  }
+
+  @media only screen and (max-width: $mobile-medium){
+    font-size: 36%;
+  }
+
+  @media only screen and (max-width: $mobile-small){
+    font-size: 30%;
+  }
+}
+
+body {
+  font-family: $font-primary;
+  margin: 0;
+  padding: 0;
+  counter-reset: section;
+}
+
+@font-face{
+  font-family: 'lato-Regular';
+  src: url("../../assets/Lato/Lato-Regular.ttf");
+}
+
+@font-face{
+  font-family: 'lato-Bold';
+  src: url("../../assets/Lato/Lato-Bold.ttf");
+}
+
+//@font-face{
+//  font-family: 'Poppins-SemiBold';
+//  src: url("../../assets/Lato/Lato-Regular.ttf");
+//}
+//
+//@font-face{
+//  font-family: 'Poppins-Medium';
+//  src: url("../../assets/Lato/Lato-Regular.ttf");
+//}

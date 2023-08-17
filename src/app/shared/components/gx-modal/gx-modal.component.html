@@ -1,0 +1,6 @@
+<div [class]="'gx-modal ' + modalConfig?.modalClass || ''">
+  <div class="gx-modal-body {{modalConfig?.bodyClass || ''}}" [style.width]="modalConfig?.width" [style.height]="modalConfig?.height">
+    <ng-content></ng-content>
+  </div>
+</div>
+<div [class]="'gx-modal-background ' + modalConfig?.backdropClass || ''" ></div>
