@@ -5,11 +5,14 @@ import {CommonModule} from "@angular/common";
 import {ReactiveFormsModule} from "@angular/forms";
 import { DynamicFormInputComponent } from './components/dynamic-form-input/dynamic-form-input.component';
 import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.component';
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
+import { ContentComponent } from './components/content/content.component';
 
 const COMPONENTS:any[] = [
   ButtonComponent,
   GxModalComponent,
-  DynamicFormInputComponent, DynamicFormComponent
+  DynamicFormInputComponent, DynamicFormComponent,
+  BreadcrumbComponent, ContentComponent
 ]
 
 @NgModule({

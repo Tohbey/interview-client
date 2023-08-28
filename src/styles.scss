@@ -13,3 +13,69 @@
   cursor: pointer;
 }
 
+.floating-label {
+  position: absolute;
+  top: 8px;
+  left: 20px;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  padding-left: 10px;
+  color: #9E9E9E;
+  font-size: 12px;
+  // z-index: 30;
+}
+
+.has-floating-label .ui-state-filled ~ .floating-label,
+.ui-state-filled .floating-label,
+.floating-label.active-control,
+.active-control ~ .floating-label,
+select:focus ~ .floating-label,
+input:focus ~ .floating-label {
+  position: absolute;
+  font-size: 11px;
+  font-weight: bold;
+  opacity: 1;
+  background: #f2f2f2;
+  padding: 2px 5px;
+  color: $primary-color;
+  left: 23px;
+  top: -14px;
+  display: inline;
+}
+
+.has-floating-label {
+  position: relative;
+  select:focus ~ .floating-label,
+  input:focus ~ .floating-label,
+  .ui-state-filled ~ .floating-label,
+  .floating-label {
+    left: 8px;
+    &.active-control {
+      left: 8px;
+    }
+  }
+}
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-control {
+  border-radius: 0px;
+  box-shadow: none;
+  transition: initial;
+  font-size: 1.3rem;
+  line-height: 2.5;
+}
+
+.form-control:focus,
+.inputText:focus {
+  border-color: $primary-color;
+  box-shadow: none;
+  outline: 0 none;
+}
+
+label{
+  width: 100%;
+  text-align: left;
+}
